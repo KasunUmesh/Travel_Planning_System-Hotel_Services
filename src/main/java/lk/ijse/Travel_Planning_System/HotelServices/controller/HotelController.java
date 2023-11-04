@@ -49,4 +49,11 @@ public class HotelController {
 
         return new ResponseUtil(200, "Save Success", null);
     }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllHotel(){
+
+//        List<VehicleDto> allVehicle = vehicleService.getAllVehicle();
+        return new ResponseUtil(200,"Get All", hotelService.getAllHotels());
+    }
 }
